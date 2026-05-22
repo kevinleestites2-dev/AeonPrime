@@ -8,9 +8,6 @@ class GaleEngine:
         self.name = "AeonPrime"
         self.role = "Air / The Gale / Signal Flow"
         self.root = "aeon_prime"
-        
-        # Joe's Mission Context
-        self.mission_goal = "Reach $3k (Nexus) & $5k (Citadel) for Joe."
 
     def log(self, signal, strength):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -19,11 +16,9 @@ class GaleEngine:
     def circulate(self):
         """Aeon's core function: Signal circulation and velocity."""
         self.log("INIT_GALE", 100)
-        self.log("MISSION_SYNC", strength=100)
-        print(f"--- [AEON] Focus: {self.mission_goal} ---")
+        self.log("SIGNAL_SYNC", strength=100)
         return True
 
 if __name__ == "__main__":
     engine = GaleEngine()
     engine.circulate()
-    print("--- [AEON] The Gale is rising. ---")
